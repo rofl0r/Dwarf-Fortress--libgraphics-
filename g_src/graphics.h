@@ -112,7 +112,7 @@ class graphicst
                     *s++ = screenb;
                     *s++ = screenbright;
                     screentexpos[screenx*dimy + screeny]=0;
-                  }
+	}
                   }
                   screenx += advance;
                 }
@@ -128,8 +128,8 @@ class graphicst
                     *s++ = f;
                     *s++ = b;
                     *s++ = bright;
+	}
                   }
-                }
                 }
 		void addcoloredst(const char *str,const char *colorstr);
 		void addst(const string &str, justification just = justify_left, int space=0);

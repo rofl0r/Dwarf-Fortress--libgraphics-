@@ -788,8 +788,8 @@ int main (int argc, char* argv[]) {
 			cmdLine += "\"";
 			cmdLine += opt;
 			cmdLine += "\"";
-    cmdLine += " ";
-  }
+			cmdLine += " ";
+			}
 		}
   }
   int result = enabler.loop(cmdLine);
