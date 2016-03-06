@@ -4,8 +4,7 @@
 #ifdef CURSES
 
 extern "C" {
-#ifndef __APPLE__
-#ifdef unix
+#if defined(__unix__) || defined(__APPLE__)
 #ifdef HAVE_NCURSESW
 /* defining _XOPEN_SOURCE_EXTENDED activates NCURSES_WIDECHAR support */
 #define _XOPEN_SOURCE_EXTENDED
@@ -21,16 +20,13 @@ extern "C" {
 # undef COLOR_YELLOW
 # include <dlfcn.h>
 #endif
-#endif
 }
 
-#ifndef __APPLE__
-#ifdef unix
+#if defined(__unix__) || defined(__APPLE__)
 extern "C" {
   void init_curses();
   extern WINDOW **stdscr_p;
 };
-#endif
 #endif
 
 #endif
