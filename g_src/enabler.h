@@ -154,7 +154,7 @@ class stringvectst
 
 		void read_file(file_compressorst &filecomp,long loadversion)
 			{
-			long dummy;
+			int32_t dummy;
 			filecomp.read_file(dummy);
 			str.resize(dummy);
 
@@ -167,7 +167,7 @@ class stringvectst
 			}
 		void write_file(file_compressorst &filecomp)
 			{
-			long dummy=str.size();
+			int32_t dummy=(int32_t)str.size();
 			filecomp.write_file(dummy);
 
 			long s;
@@ -308,7 +308,7 @@ class flagarrayst
 
 		void read_file(file_compressorst &filecomp,long loadversion)
 			{
-			long newsl;
+			int32_t newsl;
 			filecomp.read_file(newsl);
 			if(newsl>0)
 				{
@@ -336,7 +336,7 @@ class flagarrayst
 
 	private:
 		unsigned char *array;
-		long slotnum;
+		int32_t slotnum;
 };
 
 #ifdef ENABLER
@@ -776,7 +776,7 @@ class textures
 		SDL_FreeSurface(*it);
 }
   int textureCount() {
-    return raws.size();
+    return (int)raws.size();
   }
   // Upload in-memory textures to the GPU
   // When textures are uploaded, any alteration to a texture
