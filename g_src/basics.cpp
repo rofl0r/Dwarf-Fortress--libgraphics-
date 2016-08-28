@@ -22,7 +22,7 @@ using std::ofstream;
 
 #ifndef INTEGER_TYPES
 
-	#define INTEGER_TYPES
+#define INTEGER_TYPES
 
 #ifdef WIN32
 	typedef signed char int8_t;
