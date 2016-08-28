@@ -1,3 +1,5 @@
+#include <cstdint>
+
 #ifdef __APPLE__
 # include "osx_messagebox.h"
 #elif defined(unix) && defined(HAVE_GTK2)
